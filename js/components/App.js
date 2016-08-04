@@ -54,7 +54,8 @@ export default React.createClass({
     return (
       <div>
         <h1>Base64 visualizer</h1>
-        <p>See how a UTF-8 string is converted to Base64 (as specified in <a href='https://tools.ietf.org/html/rfc1421'>RFC 1421</a>).</p>
+        <p>See how a UTF-8 string is converted to Base64 (as specified in <a href='https://tools.ietf.org/html/rfc1421'>RFC 1421</a>). <a href='https://github.com/kevinlitchfield/base64-visualizer'>Source code</a></p>
+
         <p>Enter a string (special characters like ü, 好, and 😉 are OK): <input type='text' value={input.string} onChange={this.handleInputChange} /></p>
 
         {this.result(input)}
