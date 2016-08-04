@@ -1,6 +1,8 @@
 # Base64 visualizer
 
-See how a UTF-8 string is converted to Base64.
+[![Status on Travis CI](https://travis-ci.org/kevinlitchfield/base64-visualizer.svg?branch=master "Status on Travis CI")](https://travis-ci.org/kevinlitchfield/base64-visualizer)
+
+See how a UTF-8 string is converted to Base64. [Try it!](http://kevinlitchfield.com/base64-visualizer/)
 
 ## Development
 
