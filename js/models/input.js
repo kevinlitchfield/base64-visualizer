@@ -9,8 +9,8 @@ export default function (string) {
   this.string = string
 
   this.bytes = splitOnRealCharacters(this.string).map(function(character) {
-      return new Byte(codeunit.charCodeAt(0), character, i, codeunits.length - 1)
     return new Character(character).codeunits.map(function(codeunit, i, codeunits) {
+      return new Byte({ value: codeunit.charCodeAt(0), character: character, index: i, maxIndex: codeunits.length - 1 })
     })
   }).reduce(function (a, b) { return a.concat(b) }, [] )
 

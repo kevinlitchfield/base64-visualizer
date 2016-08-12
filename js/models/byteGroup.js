@@ -5,8 +5,8 @@ import { indexToBase64 } from '../helpers.js'
 import { binaryToDecimal } from '../helpers.js'
 
 export default function (bytes) {
-  this.bytes = Array(3).fill(new Byte(null, null, 0, 0)).map(function(_, i) {
-    return (bytes[i] || new Byte(null, null, 0, 0))
+  this.bytes = Array(3).fill(new Byte({ value: null, character: null, index: 0, maxIndex: 0 })).map(function(_, i) {
+    return (bytes[i] || new Byte({ value: null, character: null, index: 0, maxIndex: 0 }))
   })
 
   this.binary = this.bytes.map(function (byte) {
