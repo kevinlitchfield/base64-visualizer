@@ -1,6 +1,6 @@
 import { decimalToBinaryOctet } from '../helpers.js'
 
-export default function ({ value, character, index, maxIndex } = {}) {
+export default function ({ value, character, index, maxIndex }) {
     
   // `value` is a number from 0 to 255.
   this.value = value
