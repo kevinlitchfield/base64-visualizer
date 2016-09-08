@@ -1,3 +1,4 @@
+import Character from '../models/character.js'
 import Byte from '../models/byte.js'
 import ByteGroup from '../models/byteGroup.js'
 // `spliddit` takes surrogate pairs into account, unlike `String.prototype.split()`
@@ -8,8 +9,8 @@ export default function (string) {
   this.string = string
 
   this.bytes = splitOnRealCharacters(this.string).map(function(character) {
-    return unescape(encodeURIComponent(character)).split('').map(function(codeunit, i, codeunits) {
-      return new Byte(codeunit.charCodeAt(0), character, i, codeunits.length - 1)
+    return new Character(character).codeunits.map(function(codeunit, i, codeunits) {
+      return new Byte({ value: codeunit.charCodeAt(0), character: character, index: i, maxIndex: codeunits.length - 1 })
     })
   }).reduce(function (a, b) { return a.concat(b) }, [] )
 

@@ -1,0 +1,85 @@
+.bytegroup-labels
+  @media (max-width: 600px)
+    display: none
+  min-width: 140px
+  width: 140px
+  margin-top: -2px
+  margin-right: 1rem
+  tr
+    display: block
+    padding-top: 1px
+    font-weight: bold
+    color: #aaa
+  .label-characters, .label-base64-values
+    line-height: 2em
+  .label-characters
+    color: #FFB3B3
+  .label-base64-values
+    color: #B3B3FF
+
+.bytegroups
+  width: 100%
+
+table.bytegroup
+  margin-right: 1rem
+  margin-bottom: 2rem
+  @media (max-width: 600px)
+    width: 100%
+    margin-right: 0
+    margin-bottom: 1em
+  position: relative
+
+.byte-character
+  border: 1px solid black
+  font-weight: 700
+  position: relative
+  &:empty
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHklEQVQIW2M8fvz4fwYoYARxJk2axJCXl8cA5sBkACECDQCDj5lHAAAAAElFTkSuQmCC) repeat
+
+.result-index:empty, .result-byte:empty
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkQAKMIPaKFSv+R0REMII5MAAASlEEBKBxX8QAAAAASUVORK5CYII=) repeat
+
+td
+  text-align: center
+  border-left: 1px solid #ccc
+  border-right: 1px solid #ccc
+
+td[colspan="0"]
+  display: none
+
+td.result-bit
+  width: 1rem
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+
+code.result-input, code.result-base64
+  white-space: pre-wrap
+  word-wrap: break-word
+  font-family: 'Monaco', monospace
+  font-weight: bold
+  background-color: #eee
+  // font-size: 0.85rem
+  line-height: 2em
+  padding: 0.1rem 0.2rem
+  border-radius: 3px
+  &:empty
+    padding: 0
+code.result-input
+  color: red
+code.result-base64
+  color: blue
+
+tr.characters
+  background-color: #fafafa
+
+.base64-character
+  font-weight: 700
+  background-color: #fafafa
+  border: 1px solid black
+
+tr.character-bytes-continue-to-left
+  border-left: 2px dotted #333
+
+tr.character-bytes-continue-to-right
+  border-right: 2px dotted #333
+

@@ -1,10 +1,10 @@
 import expect from 'expect'
 import Byte from '../../js/models/byte.js'
 
-const aByte = new Byte(97, 'a', 0, 0)
-const firstHaoByte = new Byte(229, '好', 0, 2)
-const middleHaoByte = new Byte(165, '好', 1, 2)
-const lastHaoByte = new Byte(189, '好', 2, 2)
+const aByte = new Byte({ value: 97, character: 'a', index: 0, maxIndex: 0 })
+const firstHaoByte = new Byte({ value: 229, character: '好', index: 0, maxIndex: 2 })
+const middleHaoByte = new Byte({ value: 165, character: '好', index: 1, maxIndex: 2 })
+const lastHaoByte = new Byte({ value: 189, character: '好', index: 2, maxIndex: 2 })
 
 describe('Byte', () => {
   describe('characterContinuesToRight', () => {
