@@ -58,9 +58,9 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	__webpack_require__(190);
+	__webpack_require__(191);
 
-	__webpack_require__(194);
+	__webpack_require__(195);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21474,7 +21474,7 @@
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _ByteGroup = __webpack_require__(189);
+	var _ByteGroup = __webpack_require__(190);
 
 	var _ByteGroup2 = _interopRequireDefault(_ByteGroup);
 
@@ -21505,7 +21505,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'result' },
-	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(
 	          'p',
 	          { className: 'result-explanation' },
@@ -21573,6 +21572,16 @@
 	      'div',
 	      null,
 	      _react2.default.createElement(
+	        'a',
+	        { className: 'github-link', href: 'https://github.com/kevinlitchfield/base64-visualizer' },
+	        _react2.default.createElement(
+	          'svg',
+	          { className: 'github-logo', viewBox: '0 0 128 128' },
+	          _react2.default.createElement('path', { 'fill-rule': 'evenodd', 'clip-rule': 'evenodd', d: 'M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z' }),
+	          _react2.default.createElement('path', { d: 'M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0' })
+	        )
+	      ),
+	      _react2.default.createElement(
 	        'h1',
 	        null,
 	        'Base64 visualizer'
@@ -21580,25 +21589,20 @@
 	      _react2.default.createElement(
 	        'p',
 	        null,
-	        'See how a UTF-8 string is converted to Base64 (as specified in ',
+	        'See how a UTF-8 string is encoded to Base64 (as specified in ',
 	        _react2.default.createElement(
 	          'a',
 	          { href: 'https://tools.ietf.org/html/rfc1421' },
 	          'RFC 1421'
 	        ),
-	        '). ',
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://github.com/kevinlitchfield/base64-visualizer' },
-	          'Source code'
-	        )
+	        ').'
 	      ),
 	      _react2.default.createElement(
 	        'p',
 	        null,
-	        'Enter a string (special characters like ü, 好, and 😉 are OK): ',
-	        _react2.default.createElement('input', { type: 'text', value: input.string, onChange: this.handleInputChange })
+	        'Enter a string (special characters like ü, 好, and 😉 are OK):'
 	      ),
+	      _react2.default.createElement('input', { className: 'input-text', type: 'text', value: input.string, placeholder: 'Enter a UTF-8 string', onChange: this.handleInputChange }),
 	      this.result(input)
 	    );
 	  }
@@ -21730,7 +21734,13 @@
 	  value: true
 	});
 
-	exports.default = function (value, character, index, maxIndex) {
+	exports.default = function (_ref) {
+	  var value = _ref.value;
+	  var character = _ref.character;
+	  var index = _ref.index;
+	  var maxIndex = _ref.maxIndex;
+
+
 	  // `value` is a number from 0 to 255.
 	  this.value = value;
 	  this.binary = function () {
@@ -21738,11 +21748,14 @@
 	      return (0, _helpers.decimalToBinaryOctet)(value);
 	    }
 	  }();
+
 	  // `character` stores the character this byte represents either entirely or in part.
 	  this.character = character;
+
 	  // Some characters, for example 好 and 😀, are stored using multiple bytes. If this byte is part of the representation of a multi-byte character, `index` stores its position (from zero) and `maxIndex` stores the maximum index for that character.
 	  this.index = index;
 	  this.maxIndex = maxIndex;
+
 	  this.characterContinuesToLeft = this.maxIndex && this.index > 0;
 	  this.characterContinuesToRight = this.maxIndex && this.index < this.maxIndex;
 	  this.numberOfAdditionalBytesToRightInCharacter = this.maxIndex - this.index;
@@ -23578,8 +23591,8 @@
 	  this.string = string;
 
 	  this.bytes = (0, _spliddit2.default)(this.string).map(function (character) {
-	    return unescape(encodeURIComponent(character)).split('').map(function (codeunit, i, codeunits) {
-	      return new _byte2.default(codeunit.charCodeAt(0), character, i, codeunits.length - 1);
+	    return new _character2.default(character).codeunits.map(function (codeunit, i, codeunits) {
+	      return new _byte2.default({ value: codeunit.charCodeAt(0), character: character, index: i, maxIndex: codeunits.length - 1 });
 	    });
 	  }).reduce(function (a, b) {
 	    return a.concat(b);
@@ -23590,19 +23603,23 @@
 	  });
 	};
 
+	var _character = __webpack_require__(185);
+
+	var _character2 = _interopRequireDefault(_character);
+
 	var _byte = __webpack_require__(178);
 
 	var _byte2 = _interopRequireDefault(_byte);
 
-	var _byteGroup = __webpack_require__(185);
+	var _byteGroup = __webpack_require__(186);
 
 	var _byteGroup2 = _interopRequireDefault(_byteGroup);
 
-	var _spliddit = __webpack_require__(186);
+	var _spliddit = __webpack_require__(187);
 
 	var _spliddit2 = _interopRequireDefault(_spliddit);
 
-	var _lodash = __webpack_require__(187);
+	var _lodash = __webpack_require__(188);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -23610,6 +23627,20 @@
 
 /***/ },
 /* 185 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function (value) {
+	  this.codeunits = unescape(encodeURIComponent(value)).split('');
+	};
+
+/***/ },
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23619,8 +23650,8 @@
 	});
 
 	exports.default = function (bytes) {
-	  this.bytes = Array(3).fill(new _byte2.default(null, null, 0, 0)).map(function (_, i) {
-	    return bytes[i] || new _byte2.default(null, null, 0, 0);
+	  this.bytes = Array(3).fill(new _byte2.default({ value: null, character: null, index: 0, maxIndex: 0 })).map(function (_, i) {
+	    return bytes[i] || new _byte2.default({ value: null, character: null, index: 0, maxIndex: 0 });
 	  });
 
 	  this.binary = this.bytes.map(function (byte) {
@@ -23656,7 +23687,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
-/* 186 */
+/* 187 */
 /***/ function(module, exports) {
 
 	var HIGH_SURROGATE_START = 0xD800
@@ -23804,7 +23835,7 @@
 
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -40415,10 +40446,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(188)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(189)(module)))
 
 /***/ },
-/* 188 */
+/* 189 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -40434,7 +40465,7 @@
 
 
 /***/ },
-/* 189 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40578,16 +40609,16 @@
 	});
 
 /***/ },
-/* 190 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(191);
+	var content = __webpack_require__(192);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(193)(content, {});
+	var update = __webpack_require__(194)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -40604,10 +40635,10 @@
 	}
 
 /***/ },
-/* 191 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(192)();
+	exports = module.exports = __webpack_require__(193)();
 	// imports
 
 
@@ -40618,7 +40649,7 @@
 
 
 /***/ },
-/* 192 */
+/* 193 */
 /***/ function(module, exports) {
 
 	/*
@@ -40674,7 +40705,7 @@
 
 
 /***/ },
-/* 193 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -40926,16 +40957,16 @@
 
 
 /***/ },
-/* 194 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(195);
+	var content = __webpack_require__(196);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(193)(content, {});
+	var update = __webpack_require__(194)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -40952,15 +40983,15 @@
 	}
 
 /***/ },
-/* 195 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(192)();
+	exports = module.exports = __webpack_require__(193)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "html {\n  font-family: \"Helvetica Neue\", \"Helvetica\", sans-serif;\n  font-size: 18px;\n  font-weight: 300;\n  color: #333;\n  margin: 1em; }\n  @media (max-width: 600px) {\n    html {\n      font-size: 14px; } }\n\nbody {\n  line-height: 1.35em; }\n\nh1 {\n  font-weight: 700;\n  font-size: 1.5rem;\n  line-height: 1.35em; }\n\np {\n  margin: 0.5em 0; }\n\ninput[type='text'] {\n  font-size: 1rem;\n  font-weight: 300;\n  border: 1px solid #ccc; }\n\ntable {\n  display: inline-block;\n  vertical-align: top;\n  border-spacing: 0; }\n\n.results-table {\n  margin-top: 1rem;\n  display: flex;\n  align-items: stretch;\n  flex-flow: row nowrap;\n  justify-content: space-between; }\n\n.bytegroup-labels {\n  min-width: 140px;\n  width: 140px;\n  margin-top: -2px;\n  margin-right: 1rem; }\n  .bytegroup-labels tr {\n    display: block;\n    padding-top: 1px;\n    font-weight: bold;\n    color: #aaa; }\n  .bytegroup-labels .label-characters, .bytegroup-labels .label-base64-values {\n    line-height: 2em; }\n  .bytegroup-labels .label-characters {\n    color: #FFB3B3; }\n  .bytegroup-labels .label-base64-values {\n    color: #B3B3FF; }\n\n.bytegroups {\n  width: 100%; }\n\ntable.bytegroup {\n  margin-right: 1rem;\n  margin-bottom: 2rem;\n  position: relative; }\n\n.byte-character {\n  border: 1px solid black;\n  font-weight: 700;\n  position: relative; }\n  .byte-character:empty {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHklEQVQIW2M8fvz4fwYoYARxJk2axJCXl8cA5sBkACECDQCDj5lHAAAAAElFTkSuQmCC) repeat; }\n\ntd {\n  text-align: center;\n  border-left: 1px solid #ccc;\n  border-right: 1px solid #ccc; }\n\ntd[colspan=\"0\"] {\n  display: none; }\n\ntd.result-bit {\n  width: 1rem;\n  border-top: 1px solid #ccc;\n  border-bottom: 1px solid #ccc; }\n\ncode.result-input, code.result-base64 {\n  white-space: pre-wrap;\n  word-wrap: break-word;\n  font-family: 'Monaco', monospace;\n  font-weight: bold;\n  background-color: #eee;\n  line-height: 2em;\n  padding: 0.1rem 0.2rem;\n  border-radius: 3px; }\n  code.result-input:empty, code.result-base64:empty {\n    padding: 0; }\n\ncode.result-input {\n  color: red; }\n\ncode.result-base64 {\n  color: blue; }\n\n.result-index:empty, .result-byte:empty {\n  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkQAKMIPaKFSv+R0REMII5MAAASlEEBKBxX8QAAAAASUVORK5CYII=) repeat; }\n\ntr.characters {\n  background-color: #fafafa; }\n\n.base64-character {\n  font-weight: 700;\n  background-color: #fafafa;\n  border: 1px solid black; }\n\ntr.character-bytes-continue-to-left {\n  border-left: 2px dotted #333; }\n\ntr.character-bytes-continue-to-right {\n  border-right: 2px dotted #333; }\n", ""]);
+	exports.push([module.id, "html {\n  font-family: \"Lato\", \"Helvetica Neue\", \"Helvetica\", sans-serif;\n  font-size: 18px;\n  font-weight: 400;\n  color: #333;\n  min-height: 100%;\n  height: auto;\n  background: -webkit-gradient(linear, left top, 0 300, from(#c4e0e5), to(#fff)); }\n  @media (max-width: 600px) {\n    html {\n      font-size: 14px; } }\n\nbody {\n  margin: 1em;\n  line-height: 1.35em; }\n\nh1 {\n  font-family: \"Bungee\";\n  font-weight: 900;\n  font-size: 1.5rem;\n  line-height: 1.35em; }\n\np {\n  margin: 0.5em 0; }\n\n.input-text {\n  margin-top: 1em;\n  display: block;\n  font-size: 1rem;\n  font-weight: 300;\n  border: 1px solid #aaa;\n  padding: 0.5em;\n  border-radius: 5px;\n  background-color: transparent;\n  outline: none; }\n\ntable {\n  display: inline-block;\n  vertical-align: top;\n  border-spacing: 0; }\n\n.results-table {\n  margin-top: 1em;\n  display: flex;\n  align-items: stretch;\n  flex-flow: row nowrap;\n  justify-content: space-between; }\n\n.github-link {\n  float: right; }\n\nsvg.github-logo {\n  height: 1.75em; }\n\n.result {\n  margin-top: 1.5em;\n  padding: 0.5em 1em;\n  border-radius: 5px;\n  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15); }\n\n.bytegroup-labels {\n  min-width: 140px;\n  width: 140px;\n  margin-top: -2px;\n  margin-right: 1rem; }\n  @media (max-width: 600px) {\n    .bytegroup-labels {\n      display: none; } }\n  .bytegroup-labels tr {\n    display: block;\n    padding-top: 1px;\n    font-weight: bold;\n    color: #aaa; }\n  .bytegroup-labels .label-characters, .bytegroup-labels .label-base64-values {\n    line-height: 2em; }\n  .bytegroup-labels .label-characters {\n    color: #FFB3B3; }\n  .bytegroup-labels .label-base64-values {\n    color: #B3B3FF; }\n\n.bytegroups {\n  width: 100%; }\n\ntable.bytegroup {\n  margin-right: 1rem;\n  margin-bottom: 2rem;\n  position: relative; }\n  @media (max-width: 600px) {\n    table.bytegroup {\n      width: 100%;\n      margin-right: 0;\n      margin-bottom: 1em; } }\n\n.byte-character {\n  border: 1px solid black;\n  font-weight: 700;\n  position: relative; }\n  .byte-character:empty {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHklEQVQIW2M8fvz4fwYoYARxJk2axJCXl8cA5sBkACECDQCDj5lHAAAAAElFTkSuQmCC) repeat; }\n\n.result-index:empty, .result-byte:empty {\n  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkQAKMIPaKFSv+R0REMII5MAAASlEEBKBxX8QAAAAASUVORK5CYII=) repeat; }\n\ntd {\n  text-align: center;\n  border-left: 1px solid #ccc;\n  border-right: 1px solid #ccc; }\n\ntd[colspan=\"0\"] {\n  display: none; }\n\ntd.result-bit {\n  width: 1rem;\n  border-top: 1px solid #ccc;\n  border-bottom: 1px solid #ccc; }\n\ncode.result-input, code.result-base64 {\n  white-space: pre-wrap;\n  word-wrap: break-word;\n  font-family: 'Monaco', monospace;\n  font-weight: bold;\n  background-color: #eee;\n  line-height: 2em;\n  padding: 0.1rem 0.2rem;\n  border-radius: 3px; }\n  code.result-input:empty, code.result-base64:empty {\n    padding: 0; }\n\ncode.result-input {\n  color: red; }\n\ncode.result-base64 {\n  color: blue; }\n\ntr.characters {\n  background-color: #fafafa; }\n\n.base64-character {\n  font-weight: 700;\n  background-color: #fafafa;\n  border: 1px solid black; }\n\ntr.character-bytes-continue-to-left {\n  border-left: 2px dotted #333; }\n\ntr.character-bytes-continue-to-right {\n  border-right: 2px dotted #333; }\n", ""]);
 
 	// exports
 
